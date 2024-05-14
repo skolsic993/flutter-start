@@ -1,3 +1,4 @@
+import 'package:flutt_list/main/shared/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,11 +7,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: const BottomNavbar(),
       body: Center(
-          child: ElevatedButton(
-        onPressed: () => Navigator.pushNamed(context, '/about'),
-        child: Text('About'),
-      )),
+        child: Text(
+          'About',
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
+      ),
     );
   }
 }

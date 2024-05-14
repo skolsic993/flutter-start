@@ -1,3 +1,4 @@
+import 'package:flutt_list/main/shared/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -6,7 +7,12 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-    );
+        bottomNavigationBar: const BottomNavbar(),
+        body: Center(
+          child: Text(
+            'ABOUT',
+            style: Theme.of(context).textTheme.labelLarge,
+          ),
+        ));
   }
 }
